@@ -1,0 +1,10 @@
+{
+  "name": "jd-sign",
+  "version": "1.0.0",
+  "description": "京东签到",
+  "main": "index.js",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
