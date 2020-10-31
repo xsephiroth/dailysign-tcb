@@ -19,7 +19,7 @@
         {
           "name": "dailysign",
           "type": "timer",
-          "config": "0 0 6 * * * *"
+          "config": "0 0 1,6,10,16,21 * * * *"
         }
       ]
     }
