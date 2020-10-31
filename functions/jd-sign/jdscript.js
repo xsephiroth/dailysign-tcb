@@ -1,4 +1,5 @@
 // 修改支持TCB
+const slackNotify = require("./slack");
 const NodeSet = "/tmp/CookieSet.json";
 module.exports = ReadCookie;
 
@@ -510,12 +511,13 @@ function notify() {
                     $intents.finish(Shortcut + Name + one + two + three);
                 }
             }
-            if (!$nobyda.isNode)
-                $nobyda.notify(
-                    "",
-                    "",
-                    Name + one + two + three + four + disa + notify
-                );
+            // allow node notify
+            // if (!$nobyda.isNode)
+            $nobyda.notify(
+                "",
+                "",
+                Name + one + two + three + four + disa + notify
+            );
             if (DualAccount) {
                 double();
             } else {
@@ -3644,6 +3646,8 @@ function nobyda() {
         if (isQuanX) $notify(title, subtitle, message);
         if (isSurge) $notification.post(title, subtitle, message);
         if (isNode) console.log(`${title}\n${subtitle}\n${message}`);
+        // slack notify
+        if (isNode) slackNotify(`${title}\n${subtitle}\n${message}`);
         if (isJSBox)
             $push.schedule({
                 title: title,

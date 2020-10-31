@@ -30,3 +30,5 @@ tcb fn trigger create [functionName] [triggerName]
 - ReadCookie 方法更新为 async
 - ReadCookie 方法最后 all()修改为 await all();
 - 修改 NodeSet 为/tmp 目录
+- notify 方法允许 Node 环境 // if (!\$nobyda.isNode)
+- nobyda.notify 增加 slackNotify(`${title}\n${subtitle}\n${message}`);

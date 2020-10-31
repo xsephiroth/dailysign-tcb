@@ -9,7 +9,8 @@
       "description": "",
       "timeout": 60,
       "envVariables": {
-        "JD_COOKIES": "{{env.JD_COOKIES}}"
+        "JD_COOKIES": "{{env.JD_COOKIES}}",
+        "SLACK_WEBHOOK_URL": "{{env.SLACK_WEBHOOK_URL}}"
       },
       "runtime": "Nodejs10.15",
       "memorySize": 128,
